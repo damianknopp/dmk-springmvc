@@ -18,7 +18,7 @@ _cp tomcat/webapps_
 > INFO: Initializing Spring FrameworkServlet 'dispatcher'
 
 ####visit,
-> [http://localhost:8080/springmvc/doc/199][]
+> [http://localhost:8080/springmvc/doc/199]:
 > [http://localhost:8080/springmvc/doc/199.htm][]
 > [http://localhost:8080/springmvc/doc/199.json][]
 > [http://localhost:8080/springmvc/doc/199.xml][]

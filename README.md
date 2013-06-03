@@ -2,20 +2,20 @@ RESTful with SpringMVC
 ====================
 
 
-'build type mvn clean install
+####build type mvn clean install
 
-'deploy to Tomcat 7.0.40 (i.e. copy to tomcat/webapps), 
+####deploy to Tomcat 7.0.40 (i.e. copy to tomcat/webapps), 
 
-'wait for,
+####wait for,
 
 Jun 02, 2013 11:08:51 PM org.apache.catalina.core.ApplicationContext log
 INFO: Spring WebApplicationInitializers detected on classpath: [dmk.springmvc.config.WebAppInit@5e177273]
 Jun 02, 2013 11:08:51 PM org.apache.catalina.core.ApplicationContext log
 INFO: Initializing Spring root WebApplicationContext
 Jun 02, 2013 11:08:52 PM org.apache.catalina.core.ApplicationContext log
-INFO: Initializing Spring FrameworkServlet 'dispatcher'
+INFO: Initializing Spring FrameworkServlet ####dispatcher####
 
-'visit,
+####visit,
 
 http://localhost:8080/springmvc/doc/199
 http://localhost:8080/springmvc/doc/199.htm

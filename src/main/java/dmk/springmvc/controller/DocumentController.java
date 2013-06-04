@@ -1,7 +1,5 @@
 package dmk.springmvc.controller;
 
-import java.io.ByteArrayOutputStream;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import dmk.springmvc.domain.Document;
 import dmk.springmvc.service.DocumentService;
  
 @Controller
@@ -26,19 +25,19 @@ public class DocumentController {
     @RequestMapping(value="/test", method=RequestMethod.GET)
     @ResponseBody
     public String test() {
-        return "yeah boiiee!";
+        return "test.jsp";
     }
  
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     @ResponseBody
-    public String getById(@PathVariable Long id) {
-        return new String(documentService.getById(id).toByteArray());
+    public Document getById(@PathVariable Long id) {
+        return new Document(new String(documentService.getById(id).toByteArray()));
     }
      
     @RequestMapping(value="/params", params="id", method=RequestMethod.GET)
     @ResponseBody
-    public ByteArrayOutputStream getByIdFromParam(@RequestParam Long id) {
-        return documentService.getById(id);
+    public Document getByIdFromParam(@RequestParam Long id) {
+        return new Document(new String(documentService.getById(id).toByteArray()));
     }
      
 }

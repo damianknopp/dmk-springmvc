@@ -18,10 +18,11 @@ _cp tomcat/webapps_
 > INFO: Initializing Spring FrameworkServlet 'dispatcher'
 
 ####visit,
-* http://localhost:8080/springmvc/doc/199]
+* http://localhost:8080/springmvc/doc/199
 * http://localhost:8080/springmvc/doc/199.htm
 * http://localhost:8080/springmvc/doc/199.json
-* http://localhost:8080/springmvc/doc/199.xml
+* http://localhost:8080/springmvc/doc/199.xml (xml is not marshalling correctly)
+* http://localhost:8080/springmvc/doc/params?id=199
 * http://localhost:8080/springmvc/doc/test
 * http://localhost:8080/springmvc/doc/test.htm
 * http://localhost:8080/springmvc/doc/test.json

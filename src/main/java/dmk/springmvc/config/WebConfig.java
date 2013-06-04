@@ -9,11 +9,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.view.AbstractView;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
+
+import dmk.springmvc.resolvers.JsonViewResolver;
  
 @Configuration
 @EnableWebMvc
@@ -41,7 +43,18 @@ public class WebConfig {
     	View jview = new MappingJacksonJsonView();
     	List<View> defaultViews = Arrays.asList(jview);
     	vr.setDefaultViews(defaultViews);
+    	
+//    	ViewResolver jsonViewResolver = new JsonViewResolver();
+//    	List<ViewResolver> resolvers = Arrays.asList(jsonViewResolver);
+//    	vr.setViewResolvers(resolvers);
+//    	
     	return vr;
     }
-     
+    
+//    @Bean(name="jsonViewResolver")
+//    public ViewResolver jsonViewResolver(){
+//    	ViewResolver vr = new JsonViewResolver();
+//    	return vr;
+//    }
+//     
 }
